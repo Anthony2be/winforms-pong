@@ -1,7 +1,7 @@
 version: 0.0.{build}
 build:
   project: pong.sln
-  verbosity: minimal
+  verbosity: detailed
 deploy:
 - provider: GitHub
   description: 
