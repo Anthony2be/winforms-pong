@@ -19,10 +19,29 @@ namespace pong
             {
                 pong1.Location = new Point(pong1.Location.X, pong1.Location.Y + 5);
             }
+            if (e.KeyCode == Keys.Up)
+            {
+                pong2.Location = new Point(pong2.Location.X, pong2.Location.Y - 5);
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                pong2.Location = new Point(pong2.Location.X, pong2.Location.Y + 5);
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+
+            if (ball.Location.X >= pong2.Location.X-40 && ball.Location.Y >= pong2.Location.Y && ball.Location.Y <= pong2.Location.Y + 142)
+            {
+                Globals.ballX = -5;
+            }
+
+            if (ball.Location.X <= pong1.Location.X + 40 && ball.Location.Y >= pong1.Location.Y && ball.Location.Y <= pong1.Location.Y + 142)
+            {
+                Globals.ballX = 5;
+            }
+
             if (ball.Location.X < 0)
             {
                 ball.Location = new Point(110, 195);
