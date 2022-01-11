@@ -20,5 +20,5 @@ build_script:
   - '"C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/devenv.exe" /Build Release "pong.sln"'
 
 artifacts:
-- path: winforms-pong\bin\Release\*.exe
+- path: pong\bin\Release\*.exe
   name: pong
