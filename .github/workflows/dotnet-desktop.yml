@@ -100,4 +100,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: Pong
-        path: ${{ env.Wap_Project_Directory }}\pong.exe
+        path: D:\a\winforms-pong\winforms-pong\pong\bin\Release\net6.0-windows\win-x64\publish\pong.exe
