@@ -13,19 +13,19 @@ namespace pong
         {
             if (e.KeyCode == Keys.W)
             {
-                pong1.Location = new Point(pong1.Location.X, pong1.Location.Y - 5);
+                pong1.Location = new Point(pong1.Location.X, pong1.Location.Y - 10);
             }
             if (e.KeyCode == Keys.S)
             {
-                pong1.Location = new Point(pong1.Location.X, pong1.Location.Y + 5);
+                pong1.Location = new Point(pong1.Location.X, pong1.Location.Y + 10);
             }
             if (e.KeyCode == Keys.Up)
             {
-                pong2.Location = new Point(pong2.Location.X, pong2.Location.Y - 5);
+                pong2.Location = new Point(pong2.Location.X, pong2.Location.Y - 10);
             }
             if (e.KeyCode == Keys.Down)
             {
-                pong2.Location = new Point(pong2.Location.X, pong2.Location.Y + 5);
+                pong2.Location = new Point(pong2.Location.X, pong2.Location.Y + 10);
             }
         }
 
@@ -57,7 +57,7 @@ namespace pong
             {
                 ball.Location = new Point(671, 195);
                 Globals.score1++;
-                score2.Text = $"Score: {Globals.score1}";
+                score1.Text = $"Score: {Globals.score1}";
                 Globals.ballX = -5;
             }
             if (ball.Location.Y > this.Height-95)

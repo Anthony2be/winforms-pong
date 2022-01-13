@@ -36,7 +36,6 @@
             this.ball = new System.Windows.Forms.TextBox();
             this.score1 = new System.Windows.Forms.Label();
             this.score2 = new System.Windows.Forms.Label();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // pong1
@@ -71,6 +70,7 @@
             // 
             // timer1
             // 
+            this.timer1.Interval = 25;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // ball
@@ -133,6 +133,5 @@
         private TextBox ball;
         private Label score1;
         private Label score2;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
