@@ -1,0 +1,24 @@
+version: 0.0.{build}
+build:
+  project: pong.sln
+  verbosity: detailed
+deploy:
+- provider: GitHub
+  description: 
+  auth_token:
+    secure: 359OUESRLLHVdosaxi2mgvQxvSeYRmmH2LKmkarI/1PJE2tr1uZMH5NodOacqMAn
+  artifact: Pong
+  configuration: Release
+  prerelease: true
+environment:
+  auth_token:
+    secure:'mbgPeg6VB7oIYlnLQNd4XDi5/i46y+O/xXNKsnfdFFusOJjfxS5F1U1yZISa3aGg=='
+
+shallow_clone: true
+image: Visual Studio 2019
+build_script:
+  - '"C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/devenv.exe" /Build Release "pong.sln"'
+
+artifacts:
+- path: pong\bin\Release\*.exe
+  name: pong
