@@ -17,7 +17,7 @@ environment:
 shallow_clone: true
 image: Visual Studio 2022
 build_script:
-  - '"dotnet msbuild pong.sln -target:Publish -property:RuntimeIdentifiers=win-x64 -p:Configuration=Release"'
+  - '"dotnet msbuild pong/pong.csproj -target:Publish -property:RuntimeIdentifiers=win-x64 -p:Configuration=Release"'
 
 artifacts:
 - path: pong\bin\Release\net6.0-windows\win-x64\publish\*.exe
